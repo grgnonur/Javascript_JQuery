@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Metodu....</title>
+    <script src="../lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <p>Bir AJAX metodu ile GET ve POST isteğinde bulunma</p>
+        <button id="btnAjaxGet">AJax Get top 10 post</button>
+        <button id="btnAjaxPost">Ajax Post Article</button>
+
+    </div>
+
+    <hr>
+
+    <div>
+        <input type="text" placeholder="title" id="txtTitle">
+        <input type="text" placeholder="text" id="txtText">
+        
+    </div>
+
+    <div>
+
+        <ul id="list">
+
+
+        </ul>
+    </div>
+
+
+    <script>
+
+        var root = "https://jsonplaceholder.typicode.com";
+        var ul = $("#list");
+
+        $("#btnAjaxGet").click(function () {
+            $.ajax({
+                method: "GET",
+                url: root + "/posts"
+            }).done(function (data) { // tanımladığımız ajax metodu başarılı ise .done() diyip içine gerceklesecek fonksiyonu yazıyoruz.
+                for (var i = 0; i < 10; i++) {
+
+                    var li = $("<li></li>");
+                    li.text(data[i].title);
+                    ul.append(li);
+                }
+            }).fail(function () { //tanımladığımız ajax metodu hatalı ise .fail() diyerek içine gerçekleşek fonksiyonu yazıyoruz.
+                var li = $("<li></li>");
+                li.text("hata oluştu..");
+                $("#list").append(li);
+            });
+        });
+
+        $("#btnAjaxPost").click(function () {
+            $.ajax({
+                method: "POST",
+                url: root + "/posts",
+                data: {
+                    "title": $("#txtTitle").val(),
+                    "body": $("#txtText").val()
+                }
+            }).done(function (data) { // tanımladığımız ajax metodu başarılı ise .done() diyip içine gerceklesecek fonksiyonu yazıyoruz.
+
+                var li = $("<li></li>");
+                li.text(data.title + " - " + data.body);
+                ul.append(li);
+
+            }).fail(function () { //tanımladığımız ajax metodu hatalı ise .fail() diyerek içine gerçekleşecekk fonksiyonu yazıyoruz.
+                var li = $("<li></li>");
+                li.text("hata oluştu..");
+                $("#list").append(li);
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
