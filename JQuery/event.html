@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT</title>
+    <script src="lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <p id="p1">P1----Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Ducimus dicta rerum libero ipsa aut impedit possimus
+        numquam quas ad architecto. Perspiciatis modi deserunt molestiae dolorem sunt odit ab consequatur hic.</p>
+    <p class="paraf">PARAF-----Ipsa omnis laborum enim aut quasi voluptatibus dicta,
+        dolorum voluptate dolores nam illo! Nisi obcaecati, assumenda corporis dignissimos
+        sequi reprehenderit eligendi veniam iste et voluptates quis quaerat, soluta velit nobis.</p>
+    <p>EMPTY-----Obcaecati vero quos suscipit cum similique natus! Aspernatur saepe odio libero error
+        quidem nulla quam modi incidunt ad numquam, aliquid, quis ex necessitatibus deleniti
+        deserunt eum unde repellat temporibus suscipit!</p>
+    <ul class="liste">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sit blanditiis doloremque doloribus
+            enim quia in modi expedita consequatur quos, ex iure fugit aut necessitatibus dignissimos nesciunt sint
+            tempora odio.</li>
+        <li>Asperiores velit, qui iure possimus deleniti reprehenderit similique at repellendus nemo voluptatibus
+            voluptatum ipsa sapiente fuga ut. Similique molestias asperiores odio hic nulla voluptatum perferendis
+            eveniet sint, minus culpa veniam?</li>
+        <li>Quisquam, ducimus suscipit et aut provident repellendus ipsam officia voluptas explicabo natus doloremque
+            eveniet ratione, eius laborum sapiente aliquam. Reprehenderit, fugiat? Aliquid accusantium eaque ex porro.
+            Iusto placeat rem quia.</li>
+
+    </ul>
+
+    <script>
+
+        $("#p1").click(function () {
+            //alert("p1 elementine tıklanıldı.")
+            $(this).hide();
+        });
+
+        $(".paraf").dblclick(function(){ //2 defa tıklandıgında gizlenir.
+            //$(this).hide();
+            $(this).fadeOut(); // yavasca yok eder..
+        });
+
+    </script>
+</body>
+
+</html>

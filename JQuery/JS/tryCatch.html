@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript</title>
+
+        <script>
+            function metodum(){
+                alert("Merhaba");
+            }
+
+            try {
+                // Hata olması öngörülen kodlar ..
+                metodum();
+
+                var sayi1=0;
+                var sayi2=10;
+
+                if(sayi2==10){
+                    throw "sayi2 '10' olamaz..";
+                }
+
+            } catch (error) {
+                // hata oluşursa yakaladıgımız blok..
+                console.log("hata oluştu...")
+                if (error.name != undefined) {
+                    console.log(error.name);
+                }
+                if (error.message != undefined) {
+                    console.log(error.message);
+                }
+
+                console.log(error);
+                alert(error);
+                
+                
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>

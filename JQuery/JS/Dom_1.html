@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+
+    <script>
+        function getir() {
+            var p = document.getElementById("p1");
+
+            if (p != null) {
+                p.innerHTML = "HELLO JS...";
+            }
+        }
+
+        function renkDegis() {
+            var p2 = document.getElementById("p1");
+            p2.style.color = "green";
+        }
+
+
+    </script>
+
+
+</head>
+
+<body onclick="renkDegis();"> 
+    <!-- body nin kendine ait onloadı var.. ve sayfa yüklendikten sonra çalışır..-->
+    <p id="p1">
+        Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan
+        mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir
+        matbaacının bir hurufat numune kitabı oluşturmak üzere
+        bir yazı galerisini alarak karıştırdığı 1500'lerden beri
+        endüstri standardı sahte metinler olarak kullanılmıştır.
+        Beşyüz yıl boyunca varlığını sürdürmekle kalmamış,
+        aynı zamanda pek değişmeden
+        elektronik dizgiye de sıçramıştır.
+        1960'larda Lorem Ipsum pasajları da içeren
+        Letraset yapraklarının yayınlanması
+        ile ve yakın zamanda Aldus PageMaker
+        gibi Lorem Ipsum sürümleri içeren
+        masaüstü yayıncılık yazılımları ile popüler olmuştur.
+    </p>
+
+    <!-- <script>
+       getir();
+    </script> -->
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class ve Css Çalışma</title>
+    <script src="lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+
+    <style>
+        .green {
+            color: green;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btnAddClass">Add Class</button>
+    <button id="btnRemoveClass">Remove Class</button>
+    <button id="btnToggleClass">Toggle Class</button>
+    <button id="btnCss">custom CSS </button>
+
+    <hr>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem quae saepe delectus totam,
+        ad dolorem. Doloribus, aliquam. Sed ipsa officiis excepturi atque deserunt a hic magni? Praesentium sunt
+        incidunt dignissimos.</p>
+
+    <script>
+
+        $("#btnAddClass").click(function () {
+            $("p").addClass("green");
+        });
+
+        $("#btnRemoveClass").click(function () {
+            $("p").removeClass("green");
+        });
+
+        $("#btnToggleClass").click(function () {
+            $("p").toggleClass("green");
+        });
+
+        $("#btnCss").click(function () {
+            $("p").css({
+                "color" : "red",
+                "fontStyle" : "italic"
+            });
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate</title>
+    <script src="lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- <style>
+        /* bir elementin konumu üzerinde değişiklik yapmak istiyorsak css olarak position absolute olarak vermemiz gerekiyor. */
+        p {
+            position: absolute;
+        }
+    </style> -->
+    <script>
+        $(function () {
+            $("#animate").click(function () {
+                $("p").animate({
+                    "opacity": "0",
+                    "width": "0",
+                    "height": "0"
+                }, 1000, function () {  // animate fonksiyonu 3 parametre aldı 2.si zamanı 3.sü animasyon bittikten sonra çalışacak fonksiyon.
+                    alert("animasyon bitti.");
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="animate">Animate</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quo nostrum necessitatibus minima repellat enim.
+    </p>
+    <p>Illo aperiam maxime nulla temporibus consequatur ducimus adipisci quos commodi, iure, quo, optio praesentium
+        exercitationem.</p>
+    <p>Tempora, aliquid harum dignissimos quod molestiae reiciendis ipsam dolores, officiis voluptatum omnis et,
+        consectetur nam.</p>
+</body>
+
+</html>

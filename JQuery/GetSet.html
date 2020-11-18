@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetSet</title>
+    <script src="lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+
+
+</head>
+
+<body>
+    <button id="btnGetHtml">Get Html</button>
+    <button id="btnGetText">Get Text</button>
+    <button id="btnGetValue">Get Value</button>
+
+    <hr>
+
+    <button id="btnSetHtml">Set Html</button>
+    <button id="btnSetText">Set Text</button>
+    <button id="btnSetValue">Set Value</button>
+
+    <hr>
+
+    <input type="radio" id="radio1" name="cinsiyet" value="bay"><span>Bay</span>
+    <input type="radio" id="radio2" name="cinsiyet" value="bayan"><span>Bayan</span>
+    <button id="btnGetSelectedCinsiyet">Get selected cinsiyet</button>
+
+    <hr>
+
+    <input type="checkbox" name="music" value="pop"><span>POP</span>
+    <input type="checkbox" name="music" value="rap"><span>RAP</span>
+    <button id="btnGetSelectedMusicType">Get selected Music</button>
+
+    <hr>
+    <hr>
+
+    <input id="txt" type="text" value="">
+
+    <p><b>Lorem ipsum dolor sit amet</b> consectetur adipisicing elit. Voluptatum nostrum quidem, itaque aperiam ex
+        aliquid.</p>
+
+    <script>
+        $("#btnGetSelectedMusicType").click(function () {
+           // var selectList = $("input[name='music']:checked"); //checkbox da elimizde birden fazla degerler olabilecek bu yüzden .val(); diyip alamıyoruz.
+
+            // for(var i = 0; i< selectList.length; i++){
+            //     var selected = selectList[i];
+            //     var val = $(selected).val();
+            //     console.log(val);
+            // }
+            $("input[name='music']:checked").each(function(item, element){
+                console.log($(element).val());
+            });
+        });
+
+        $("#btnGetSelectedCinsiyet").click(function () {
+            var val = $("input[name='cinsiyet']:checked").val();
+            console.log(val);
+        });
+
+        $("#btnGetHtml").click(function () {
+            var html = $("p").html();
+            console.log(html);
+        });
+
+        $("#btnGetText").click(function () {
+            var text = $("p").text();
+            console.log(text);
+        });
+
+        $("#btnGetValue").click(function () {
+            var vle = $("input[type ='text']").val();
+            console.log(vle);
+        });
+
+        $("#btnSetHtml").click(function () {
+            var html = $("p").html("<b>Onur</b> gürgen");
+            console.log(html);
+        });
+
+        $("#btnSetText").click(function () {
+            var text = $("p").text("Onur Gürgen");
+            console.log(text);
+        });
+
+        $("#btnSetValue").click(function () {
+            var vle = $("input[type ='text']").val("Onur Gürgen");
+            console.log(vle);
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript</title>
+
+        <script>
+            var isimler = [];
+
+            function pushmetodu() {
+                
+                isimler.push("Onur");
+                isimler.push("Mert");
+                isimler.push("Sevgi");
+                isimler.push("mahmut");
+
+            }
+
+            function elemanlarıgoster() {
+                for(var i = 0; i<isimler.length;i++){
+                    alert(isimler[i]);
+                }
+            }
+            function unShiftMetodu(){
+                //Dizinin en başına elemanı ekler.
+                isimler.unshift("Gürgenler");
+            }
+            function sortMetoduKullanimi(){
+               //Dizinin alfabetik sıralanmasını sağlar.
+               isimler.sort();
+           }
+            function popMetodu(){
+                var sonEleman = isimler.pop();
+                alert("Okunan son eleman : " + sonEleman);
+            }
+            function shiftMetodu(){
+                //dizide okunan ilk eleman diziden çıkarılır.
+                var ilkeleman = isimler.shift();
+                alert("ilk elemanı : " + ilkeleman);
+            }
+            function spileceMetodu(){
+                //Dizieden belirtilen sıra numarasından başlayarak
+                //belirtilen adette eleman çıkarmayı sağlar.
+                isimler.splice(1,1);
+            }
+
+            unShiftMetodu();  
+            pushmetodu();
+            sortMetoduKullanimi();
+            //popMetodu();
+            //shiftMetodu();
+            // spileceMetodu();
+            elemanlarıgoster(); 
+             
+        </script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+
+    <script>
+
+
+        var student = {
+            adi: "Onur",
+            soyadi: "Gürgen",
+            yas: 24,
+            selamVer: function () {
+                console.log("merhaba Onur..");
+            },
+            info : function(){
+                console.log(this.adi+" "+this.soyadi+" "+this.yas);
+            }
+        };
+
+        // console.log(student.adi);
+        // console.log(student.adi+" "+student.soyadi+" " + student.yas);
+        // console.log(student);
+
+
+        student.selamVer();
+        student.info();
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

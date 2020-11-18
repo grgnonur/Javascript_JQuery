@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effects</title>
+    <script src="lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+
+    <script>
+
+        $(function () {
+            $("#hide").click(function () {
+                $("p").fadeOut();
+            });
+            $("#show").click(function () {
+                $("p").show(2000); // 2sn de yap.
+            });
+            $("#toggle").click(function(){
+                $("p").toggle(1000);
+            });
+            $("#toggle2").click(function(){
+                $("#div1").toggle(1000);
+            });
+
+            // slideUp , slideDown , slideToggle metodları var
+            // fadeOut , fadeIn , fadeToggle metodları var. 
+        });
+
+
+
+    </script>
+    <style>
+        #div1 {
+            background-color: aqua;
+            margin: 25px;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="toggle2">toggle2</button>
+    <hr>
+    <div id="div1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa similique esse vel tempora dolorum.</p>
+    </div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ipsa similique esse vel tempora dolorum.</p>
+    <p>Eaque necessitatibus fugiat at quam dolorum rem, eum in! Corporis, deserunt. Distinctio eius et quis.</p>
+    <p>Praesentium nemo omnis minus mollitia reprehenderit aliquam rem nam quas quod magni unde, laudantium culpa.</p>
+</body>
+
+</html>

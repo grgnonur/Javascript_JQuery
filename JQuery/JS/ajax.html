@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+
+
+</head>
+
+<body>
+    <button id="btnAjax" type="button">Get Todo Items</button>
+    <ul id="list">
+
+    </ul>
+    <script>
+
+        document.getElementById("btnAjax").onclick = function () {
+            var xhttp;
+
+            if (window.XMLHttpRequest) {
+                // modern bir tarayıcı XMLHTTP desteği vardır.
+
+                xhttp = new XMLHttpRequest();
+
+            } else {
+                //eski tarayıcılarda
+
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(this.responseText);
+                }
+            };
+
+            xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+            xhttp.send();
+        };
+
+
+    </script>
+</body>
+
+</html>

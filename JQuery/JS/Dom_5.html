@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+</head>
+<bod>
+    <div id="div1">
+        <p id="p1">
+            this is bubbling
+        </p>
+    </div>
+
+    <div id="div2">
+        <p id="p2">
+            this is capturing
+        </p>
+    </div>
+
+    <script>
+        document.getElementById("p1").addEventListener("click", function () {
+            alert("P1 element");
+        }, false);
+        document.getElementById("div1").addEventListener("click", function () {
+            alert("div1 element");
+        }, false);
+        document.getElementById("p2").addEventListener("click", function () {
+            alert("P2 element");
+        }, true);
+        document.getElementById("div2").addEventListener("click", function () {
+            alert("div2 element");
+        }, true);
+    </script>
+
+    <style>
+        #div1 {
+            background-color: aqua;
+            margin: 50px;
+            padding: 50px;
+        }
+        #div2 {
+            background-color: burlywood;
+            margin: 50px;
+            padding: 50px;
+        }
+        #p1 {
+            font-size: larger;
+            text-align: center;
+        }
+        #p2 {
+            font-size: larger;
+            text-align: center;
+        }
+    </style>
+</bod>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Ve Remove</title>
+    <script src="lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+
+    <input type="text" id="todoText" placeholder="tode Text">
+    <button id="btnaddappend">Liste sonuna ekle</button>
+    <button id="btnremoveappend">Liste başına ekle</button>
+
+    <hr>
+
+    <h4>TODO LİST</h4>
+    <ul id="todoList">
+
+
+    </ul>
+
+    <script>
+
+        $("#btnaddappend").click(function () {
+            var li = $("<li></li>"); //JQUERYDE element oluşturma bu şekilde oluyor.
+            li.text($("#todoText").val());
+
+            $("#todoList").append(li);
+        });
+
+        $("#btnremoveappend").click(function () {
+            var li = $("<li></li>");
+            li.text($("#todoText").val());
+
+            $("#todoList").prepend(li);
+        });
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
