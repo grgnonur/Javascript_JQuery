@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax İşlemleri</title>
+    <script src="../lib/jquery321/node_modules/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <div>
+        <p>Bir html içeriği bir elementin içerisine yüklemeyi sağlar.</p>
+        <button id="btnLoad">Load HTML</button>
+        <button id="btnClearHTML">Clear HTML</button>
+    </div>
+
+    <div>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+    <script>
+
+        var url = "http://127.0.0.1:8081";
+
+        $("#btnLoad").click(function () {
+
+            $("#list").load(url, function (data, status) { //load() ile başka bir sayfadan verileri çekebildik...
+
+                if (status == "success") {
+                    console.log("Veri çekme başarılı olundu...");
+
+                }
+
+                if (status == "error") {
+
+                    var li = $("<li></li>");
+                    li.text("hata oluştu..");
+                    $("#list").append(li);
+                }
+            });
+
+        });
+
+        $("#btnClearHTML").click(function(){
+            $("#list").empty(); // ul etiketini yakaladık ve empty fonksiyonu ile içini boşalttık.
+        });
+
+
+    </script>
+</body>
+
+</html>
